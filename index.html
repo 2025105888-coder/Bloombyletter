@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloom by Letter — fresh flowers, thoughtfully arranged.">
+  <title>Bloom by Letter | Fresh Flowers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">A little beauty, delivered to your door <span>✳</span> Same-day delivery in selected areas</div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Bloom by Letter home">bloom<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-trigger" type="button">Shop by season <span>⌄</span></button>
+        <div class="dropdown-panel season-panel">
+          <p class="dropdown-heading">Fresh Flowers</p>
+          <button data-season="Spring">Spring <small>Tulip · Peony · Ranunculus</small></button>
+          <button data-season="Summer">Summer <small>Sunflower · Gerbera · Hydrangea</small></button>
+          <button data-season="Autumn">Autumn <small>Chrysanthemum · Aster · Dahlia</small></button>
+          <button data-season="Winter">Winter <small>Orchid · Camellia · Tuberose</small></button>
+          <button data-season="All">View all fresh flowers</button>
+        </div>
+      </div>
+      <a class="nav-link" href="#budget">Shop by Budget</a>
+      <a class="nav-link" href="#colors">Shop by Color</a>
+      <a class="nav-link" href="#occasions">Occasions</a>
+      <a class="nav-link" href="#name-studio">Shop by Name</a>
+      <a class="nav-link" href="#delivery">Delivery</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">FLOWERS FOR EVERY FEELING</p>
+        <h1>Make someone’s day<br> <em>blossom.</em></h1>
+        <p class="hero-description">Fresh flowers, artfully arranged. From little everyday moments to the memories you’ll keep forever.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#shop">Shop bouquets <span>↗</span></a>
+          <a class="text-link" href="#name-studio">Create a bouquet by name <span>→</span></a>
+        </div>
+        <div class="hero-note"><span class="tiny-flower">✿</span><span>Thoughtfully chosen blooms<br><b>Made personal, just for you</b></span></div>
+      </div>
+      <div class="hero-art">
+        <img src="home.png" alt="Soft pink and white fresh flower bouquet">
+        <div class="image-caption"><span>THE FLOWER EDIT</span><b>Freshly picked, beautifully yours.</b></div>
+        <div class="floating-stamp">FLOWERS<br>WITH<br>FEELING</div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <span>SEASONAL STEMS</span><span>✳</span><span>MADE WITH MEANING</span><span>✳</span><span>DELIVERED WITH LOVE</span>
+    </section>
+
+    <section class="section seasonal-section" id="seasons">
+      <div class="section-heading">
+        <div><p class="eyebrow">IN SEASON NOW</p><h2>Follow the <em>flowers.</em></h2></div>
+        <p>Every season brings its own kind of beauty. Find a bloom that feels like this moment.</p>
+      </div>
+      <div class="season-grid">
+        <a class="season-card" href="#flowers">
+          <img src="spring.png" alt="Pink tulip for spring">
+          <span class="season-number">01 / SPRING</span>
+          <div class="season-copy"><h2>Fresh beginnings</h2><p>Tulip · Peony · Iris</p></div>
+        </a>
+        <a class="season-card" href="#flowers">
+          <img src="summer.png" alt="Sunflowers for summer">
+          <span class="season-number">02 / SUMMER</span>
+          <div class="season-copy"><h2>Sun-kissed days</h2><p>Sunflower · Gerbera · Lily</p></div>
+        </a>
+        <a class="season-card" href="#flowers">
+          <img src="autum.png" alt="Seasonal autumn bouquet">
+          <span class="season-number">03 / AUTUMN</span>
+          <div class="season-copy"><h2>Golden moments</h2><p>Aster · Chrysanthemum</p></div>
+        </a>
+        <a class="season-card" href="#flowers">
+          <img src="winter.png" alt="Colorful winter roses">
+          <span class="season-number">04 / WINTER</span>
+          <div class="season-copy"><h2>Warm & wonderful</h2><p>Rose · Orchid · Calla Lily</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE FLOWER SHOP</p><h2>Find your <em>flowers.</em></h2></div>
+        <p>Explore our favourite stems and thoughtful bouquets, selected for every kind of moment.</p>
+      </div>
+      <div class="shop-toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search flowers or bouquets..." aria-label="Search flowers"></label>
+        <label class="filter-label">Sort
+          <select id="sortSelect"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name A–Z</option></select>
+        </label>
+      </div>
+      <div class="filter-chips" id="activeFilters">
+        <button class="filter-chip active" data-filter="all">All flowers</button>
+        <button class="filter-chip" data-filter="red">Red</button>
+        <button class="filter-chip" data-filter="pink">Pink</button>
+        <button class="filter-chip" data-filter="white">White</button>
+        <button class="filter-chip" data-filter="yellow">Yellow</button>
+        <button class="filter-chip" data-filter="purple">Purple</button>
+        <button class="filter-chip" data-filter="blue">Blue</button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="results-note" id="resultsNote"></p>
+    </section>
+
+    <section class="budget-section" id="budget">
+      <div class="budget-copy">
+        <p class="eyebrow">A BOUQUET FOR EVERY BUDGET</p>
+        <h2>Beautiful things,<br><em>at your price.</em></h2>
+        <p>Set your budget and discover blooms that fit the moment — no guesswork needed.</p>
+      </div>
+      <div class="budget-control">
+        <div class="budget-values"><label for="budgetRange">Your budget</label><strong id="budgetValue">Rp150.000</strong></div>
+        <input id="budgetRange" type="range" min="50000" max="10000000" step="50000" value="150000">
+        <div class="range-labels"><span>Rp50.000</span><span>Rp10.000.000</span></div>
+        <button class="button button-light" id="applyBudget">Find my flowers <span>→</span></button>
+        <p class="budget-hint" id="budgetHint">Showing products priced within your budget.</p>
+      </div>
+    </section>
+
+    <section class="section color-section" id="colors">
+      <div class="section-heading">
+        <div><p class="eyebrow">COLOUR YOUR MOMENT</p><h2>Shop by <em>colour.</em></h2></div>
+        <p>Choose a colour to set the feeling. We’ll help you find the flowers to match.</p>
+      </div>
+      <div class="color-options">
+        <button data-color="red"><i style="--swatch:#a52f3d"></i>Red</button>
+        <button data-color="pink"><i style="--swatch:#e8a5b5"></i>Pink</button>
+        <button data-color="white"><i style="--swatch:#f6f2e9"></i>White</button>
+        <button data-color="yellow"><i style="--swatch:#eac34e"></i>Yellow</button>
+        <button data-color="orange"><i style="--swatch:#df854e"></i>Orange</button>
+        <button data-color="purple"><i style="--swatch:#9c80b9"></i>Purple</button>
+        <button data-color="blue"><i style="--swatch:#8caecb"></i>Blue</button>
+        <button data-color="peach"><i style="--swatch:#f0b39b"></i>Peach</button>
+        <button data-color="green"><i style="--swatch:#8ba78b"></i>Green</button>
+        <button data-color="cream"><i style="--swatch:#e8ddc6"></i>Cream</button>
+        <button data-color="custom"><i class="custom-swatch">✳</i>Custom</button>
+      </div>
+    </section>
+
+    <section class="occasion-section" id="occasions">
+      <div class="occasion-image"><img src="oc.png" alt="Elegant flower bouquet for a special occasion"></div>
+      <div class="occasion-copy">
+        <p class="eyebrow">SOMETHING TO CELEBRATE</p>
+        <h2>There’s a flower<br>for <em>every feeling.</em></h2>
+        <p>For the big milestones, the little victories, and the moments when words aren’t quite enough.</p>
+        <div class="occasion-list" id="occasionList">
+          <button data-occasion="Birthday">Birthday <span>↗</span></button>
+          <button data-occasion="Anniversary">Anniversary <span>↗</span></button>
+          <button data-occasion="Wedding">Wedding <span>↗</span></button>
+          <button data-occasion="Graduation">Graduation <span>↗</span></button>
+          <button data-occasion="Get Well Soon">Get Well Soon <span>↗</span></button>
+          <button data-occasion="Sympathy & Condolences">Sympathy & Condolences <span>↗</span></button>
+          <button data-occasion="Thank You">Thank You <span>↗</span></button>
+          <button data-occasion="Proposal & Engagement">Proposal & Engagement <span>↗</span></button>
+          <button data-occasion="Mother’s Day">Mother’s Day <span>↗</span></button>
+          <button data-occasion="Congratulations">Congratulations <span>↗</span></button>
+          <button data-occasion="Just Because">Just Because <span>↗</span></button>
+          <button data-occasion="Holidays & Celebrations">Holidays & Celebrations <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="name-studio" id="name-studio">
+      <div class="studio-heading">
+        <p class="eyebrow">YOUR NAME, IN BLOOM</p>
+        <h2>A bouquet that spells<br><em>something special.</em></h2>
+        <p>Every letter holds a flower. Enter a name and we’ll turn it into a personal arrangement, stem by stem.</p>
+      </div>
+      <div class="studio-card">
+        <form id="nameForm" class="name-form" novalidate>
+          <label for="nameInput">Who are we blooming for?</label>
+          <div class="name-input-row"><input id="nameInput" type="text" maxlength="40" placeholder="Enter a name, e.g. REI" autocomplete="off"><button class="button button-dark" type="submit">Create my bouquet <span>→</span></button></div>
+          <p class="form-error" id="nameError" role="alert"></p>
+        </form>
+        <div class="studio-empty" id="studioEmpty"><span class="line-flower">✿</span><b>Your personal bouquet starts here.</b><small>Type a name above to see its flowers and meanings.</small></div>
+        <div class="name-result hidden" id="nameResult" aria-live="polite">
+          <div class="result-title"><div><p class="eyebrow">MADE JUST FOR YOU</p><h3 id="bouquetTitle">REI’s bouquet</h3></div><span class="result-stem-count" id="stemCount">3 stems</span></div>
+          <div class="bouquet-preview" id="bouquetPreview"></div>
+          <div class="letter-flower-grid" id="letterFlowerGrid"></div>
+          <div class="customize-row">
+            <label>Wrapping
+              <select id="wrappingSelect"><option value="Natural kraft">Natural kraft</option><option value="Soft ivory">Soft ivory</option><option value="Blush pink">Blush pink</option><option value="Forest green">Forest green</option><option value="Chocolate brown">Chocolate brown</option></select>
+            </label>
+            <label>Ribbon
+              <select id="ribbonSelect"><option value="Chocolate">Chocolate</option><option value="Ivory">Ivory</option><option value="Blush">Blush</option><option value="Sage">Sage</option><option value="Black">Black</option></select>
+            </label>
+          </div>
+          <div class="result-footer"><div><small>Estimated price</small><strong id="namePrice">Rp150.000</strong></div><button class="button button-dark" id="addNameBouquet" type="button">Add to bag <span>＋</span></button></div>
+        </div>
+      </div>
+      <p class="studio-footnote">Our alphabet-to-flower guide is thoughtfully curated. Repeated letters will appear as repeated stems in the same order as the name.</p>
+    </section>
+
+    <section class="delivery-section" id="delivery">
+      <div><span class="delivery-icon">✳</span><p class="eyebrow">FROM OUR STUDIO TO THEIR DOOR</p><h2>Good flowers.<br><em>Good feelings.</em></h2></div>
+      <div class="delivery-details"><p>We prepare each arrangement with care and help you send a little joy to the people who matter.</p><div class="delivery-step"><b>01</b><span><strong>Choose your blooms</strong><small>Pick a bouquet or create one by name.</small></span></div><div class="delivery-step"><b>02</b><span><strong>Tell us where it goes</strong><small>Delivery details can be confirmed with our florist.</small></span></div><div class="delivery-step"><b>03</b><span><strong>Send a little happiness</strong><small>We’ll coordinate your order directly with you.</small></span></div></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">LET’S MAKE SOMETHING BEAUTIFUL</p>
+      <h2>Need a little <em>help?</em></h2>
+      <p>Tell us what you have in mind. We’ll help you find the right flowers.</p>
+      <a class="button button-dark" href="https://wa.me/6281234567890?text=Hello%20Bloom%20by%20Letter%2C%20I%20need%20help%20choosing%20flowers." target="_blank" rel="noopener">Contact our florist <span>↗</span></a>
+      <small>Replace the sample WhatsApp number in the code with your business number.</small>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#home">bloom<span>.</span></a><p>Fresh flowers, made personal.</p><div><a href="#shop">Shop</a><a href="#name-studio">Shop by Name</a><a href="#delivery">Delivery</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> Bloom by Letter. Student project demo.</small></footer>
+
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
+    <button class="overlay-backdrop" id="closeCartBackdrop" aria-label="Close cart"></button>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-header"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Your bag <span id="cartHeaderCount">(0)</span></h2></div><button class="close-cart" id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">Your bag is waiting for something lovely.</div>
+      <div class="cart-bottom"><div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">Rp0</strong></div><p>Delivery fee will be confirmed by our florist.</p><button class="button button-dark full-button" id="checkoutButton">Continue via WhatsApp <span>↗</span></button><small>This demo keeps cart data in memory only; it does not use a database.</small></div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
